@@ -1,0 +1,25 @@
+General things to add:
+placebid/place_hold life cycle
+implementing clients listening
+Timers on items
+Implementing ITEM_SOLD msg
+implementing pass msg
+adding connect to ac on bank, connect to bank on ac
+
+
+Things to add(Anthony):
+UI should display what user currently has on hold.
+UI should display what a user has already bought.
+display the status of items (regardless of whether they bid on them or not)
+status of items they have bid on
+clean up the bankconnected/acconnected booleans (perhaps we can connect to another ip later on)
+
+DESIGN:
+ac/ah/bank controller/fxml are way, way similar, fix this
+Catch bad output in the textfields
+
+
+BUGS:
+Check for interleaving messages. I don't think I'm checking anywhere for this.
+
+

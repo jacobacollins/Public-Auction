@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AuctionHouseController">
+    <children>
+      <Label text="Current Items" />
+      <Label fx:id="lblAuctionHouseList" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="300.0" text="Items" />
+        <HBox prefHeight="30.0" prefWidth="400.0">
+            <children>
+                <Label prefHeight="30.0" prefWidth="70.0" text="AC IP">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfAuctionCentralIP" prefHeight="30.0" prefWidth="166.0" text="127.0.0.1" />
+                <Button fx:id="btnConnectAC" mnemonicParsing="false" onAction="#btnConnectAC" prefHeight="25.0" prefWidth="113.0" text="Connect to AC" />
+            </children>
+        </HBox>
+        <TextArea fx:id="taOutput" editable="false" layoutX="1.0" prefHeight="450.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+
+    </children>
+</VBox>

@@ -1,0 +1,124 @@
+User's guide
+
+Using a GUI - Updated 12/8/2017
+
+1.) Run Main(), select Bank
+    This will automatically launch your bank and start listening.
+    
+    If your AC is not on localhost/127.0.0.1 you will need to enter the IP of
+    AC on the Bank GUI's textfield and click "Connct to AC."
+    
+    
+2.) Run Main(), select Auction Central
+    This will automatically launch your Auction Central and start listening.
+    
+    If your Bank is not on localhost/127.0.0.1 you will need to enter the IP of
+    Bank on the Auction Central GUI's textfield and click "Connect to Bank."
+
+    
+3.) Run Main(), select Auction House, enter name of your AH and press OK
+
+    ASSUMING YOU STARTED THE AUCTION CENTRAL FIRST.
+    If the Auction Central is on localhost/127.0.0.1, that is the default and you can
+    just immediately click on "Connect to AC". Otherwise, you will need to enter the
+    IP of the Auction Central first and then click "Connect to AC".
+    
+    After connecting to the AC, your auction house will get an Auction House Key, a
+    public ID (This is used as your port number) and your items will also be assigned
+    your ID#. From here, the Auction House will start listening for msg's on that port
+    it was given.
+
+    
+4.) Run Main(), select Agent, enter name of your Agent and press OK
+
+    ASSUMING YOU STARTED THE AUCTION CENTRAL AND BANK FIRST.
+    If the Auction Central and bank are on localhost/127.0.0.1, then click
+    "Connect to localhost". Otherwise, you will need to individually enter the
+    Auction Central and Bank IPs and click on "Connect to AC" and "Connect to Bank"
+    buttons respectively.
+    
+    After connecting to the Bank you will get a new account with an account number,
+    bankKey and starting balance.
+    
+    After connecting to the Auction Central you will get a bidding key and a port
+    number from the Auction Central. The Agent will now start listening for msg's on 
+    that port it was given. This will also make your item list continually update
+    on the GUI. Any items from any given Auction House's will now be available
+    for sale. 
+   
+    The intention is that you connect to the Bank first as you need your Bank Key
+    to get a BiddingKey from Auction Central. If you don't do it in this order,
+    your connection to Auction Central will be refused.
+    
+    From here, you will now have some functionality available to you on the Agent
+    GUI.
+
+    Explanation of the Agent GUI:.
+    
+    Balance: This is the current amount of money you have available
+             in the bank. It gets updated after you connect to the bank
+                     
+    Connect AC/Bank to Localhost: This connects you to the AC and Bank at localhost(127.0.0.1)
+    
+    BidAmount Textfield: Enter bid's into here to place bids and withdraw money.
+    
+    Place Bid Button: After entering an amount and selecting an item in the item
+                      list, you can place a bid on an item by clicking this.
+                      
+    Withdraw Button: This button is to show the functionality of Agent to Bank
+                     connectivity and also withdraw money for a rainy day :-)
+                     
+    Bank IP TextField: This is for the Bank IP/Hostname you want to connect to.
+    
+    Connect to Bank Button: If you want to manually connect to the Bank not on localhost
+                            then use this button.
+                            
+    Connect to AC Button: If you want to manually connect to AC not on localhost then
+                          use this button.
+                          
+    Status TextArea: This is an area to give the Agent updates on what is happening.
+    
+    Inventory: Images of your (hopefully) bought items will appear here.
+    
+    Items ListView: A list of the current available items in auction houses.
+                    Selecting an item will allow you to then place a bid on it.
+    
+
+Feel free to do #3 and #4 in whatever order you'd like and as often as you'd like.
+The program is designed to have as many Agent's and AHs as you want.
+
+General Info:
+
+Port Ranges
+50000 Bank
+50001 Auction Central
+50100+ Auction House starts at 50100 and increments each time a new one signs on with AC.
+50200-50900 Agents start at a port in this range and increment each time a new agent 
+            signs on with the AC.
+
+
+Using the Command Line - Updated 12/1/2017 (This was the last time it was tested, behavior unknown at this point)
+
+1. First, you want to spin up a Bank and AuctionCentral.
+    I prefer to put these both on the same command line using &
+
+    Go into /out/production/PublicAuction (Or where ever your .class' are)
+    
+    Run:
+    java Server Bank &
+    java Server AC &
+
+2. Now, if you want an AuctionHouse I recommend opening another shell
+    
+    Run:
+    java Client AH AH1  (Note: AH1 designates a name, give it anything)
+
+3. Now, if you want an Agent, I personally recommend using the GUI but
+    you can use an agent on the shell also.
+    
+    Run:
+    java Client Agent Agent1 (Note: Agent1 designates a name, give it anything)
+
+    Keep in mind the Agent is very limited on the command line and was originally
+    made strictly for debug'ing. This is still left in for "proof of concept".
+    A proper Agent would be spun up from the Main GUI

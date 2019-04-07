@@ -1,0 +1,13 @@
+Final todo:
+Place Bid/Place Hold are done, any testing of this is nice. If you find a bug, let us know.
+Finishing the ITEM_SOLD msg implementation
+Finishing the OUTBID/ITEM_PASS msg implementation
+Code comments!!!
+Reviewing readme
+Reviewing design doc
+
+
+
+Optional:
+Giving user some more feedback on what's going on with items on Agent UI
+Bought items get placed in as images.

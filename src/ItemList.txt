@@ -1,0 +1,22 @@
+// ItemName, ImgPath, MinimumBid
+Suit Jacket, /res/SuitJacket.png, 50
+i7 Laptop, /res/i7Laptop.png, 500
+Picasso Painting, /res/PicassoPainting.png, 100000
+Physics Textbook, /res/PhysicsTextbook.png, 200000
+Logitech Mouse, /res/LogitechMouse.png, 30
+Roman's MacBook, /res/RomansMacBook.png, 30
+Joel's fidget spinner, /res/JoelsFidgetSpinner.png, 30
+Roman's Sports Coat, /res/RomansSportsCoat.png, 30
+A passing grade, /res/PassingGrade.png, 30
+Ibanez Iceman Guitar, /res/IbanezIcemanGuitar.png, 150
+Printer, /res/Printer.png, 150
+Roman's art project, /res/RomansArtProject.png, 100001
+LOL 1380 riot points, /res/LOL1380RiotPoints.png, 1
+Immortality, /res/Immortality.png, 1000000
+Box o' Surprise, /res/BoxOSurprise.png, 10
+4k TV, /res/4kTV.png, 200
+Mountain air, MountainAir.png, 100
+MTG 100 packs, /res/MTG100Packs.png, 50
+SNES Mini, /res/SNESMini.png, 1000
+RPG Dice Set, /res/RPGDiceSet.png, 10
+Dust Bunny, /res/DustBunny.png, 0
